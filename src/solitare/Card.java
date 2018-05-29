@@ -7,6 +7,8 @@ package solitare;
 
 
 public class Card {
+    Suit suit;
+    Value value;
     public enum Suit{
         Spade,
         Club,
@@ -30,12 +32,9 @@ public class Card {
         King
     }
     
-    public void SetSuit(Suit s){
-    
-    }
-    
-    public void SetValue(Value v){
-        
+    public Card (Suit s, Value v) {
+        this.suit = s;
+        this.value = v;
     }
     
     
