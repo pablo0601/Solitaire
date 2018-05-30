@@ -16,6 +16,9 @@ public class Solitare {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        for (Card.Suit card : Card.Suit.values()) {
+    System.out.println(card);
+}
     }
     
 }
