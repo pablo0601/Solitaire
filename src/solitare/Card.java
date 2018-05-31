@@ -38,5 +38,10 @@ public class Card {
         this.value = v;
     }
     
+    public String ToString() {
+        String s = this.value + " of " + this.suit;
+        return s;
+    }
+    
     
 }
