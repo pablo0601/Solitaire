@@ -5,25 +5,21 @@
  */
 package solitare;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author michael.pierik700
  */
 public class Solitare {
     
-    static List<String> cards = new ArrayList<String>();
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Deck d = new Deck();
+       Deck d = new Deck();
+       
         for(int i = 0; i < 52; i++){
             System.out.println(d.c[i].ToString());                  
-        }
-    }
-    
+        } 
+    }   
 }
