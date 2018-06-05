@@ -12,12 +12,12 @@ import java.util.Random;
  */
 public class Deck {
     
-    Card[] c = new Card[52];
+    Card[] card = new Card[52];
     public Deck() {
         int i = 0;
         for(Card.Suit s: Card.Suit.values()){
             for(Card.Value v: Card.Value.values()){
-                c[i] = new Card(s, v);
+                card[i] = new Card(s, v);
                 i++;
             }
         }
@@ -29,9 +29,9 @@ public class Deck {
         for(int i = 0; i < 51; i++){
             Card memory = null;
             int j = rand.nextInt((51 - i) + 1) + i;
-            memory = this.c[i];
-            this.c[i] = this.c[j];
-            this.c[j] = memory;
+            memory = this.card[i];
+            this.card[i] = this.card[j];
+            this.card[j] = memory;
         }
         
         

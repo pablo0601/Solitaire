@@ -15,11 +15,12 @@ public class Solitare {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-       Deck d = new Deck();
-       
-        for(int i = 0; i < 52; i++){
+        
+       //Deck d = new Deck();
+       Layout l = new Layout();
+       System.out.println(l.Column1);
+        /*for(int i = 0; i < 52; i++){
             System.out.println(d.c[i].ToString());                  
-        } 
+        }*/ 
     }   
 }

@@ -14,30 +14,33 @@ import java.util.List;
  */
 public class Layout {
     static Object row[] = new Object [7];
-    static List<String> Column1 = new ArrayList<String>(); //row[0]
-    static List<String> Column2 = new ArrayList<String>();
-    static List<String> Column3 = new ArrayList<String>();
-    static List<String> Column4 = new ArrayList<String>();
-    static List<String> Column5 = new ArrayList<String>();
-    static List<String> Column6 = new ArrayList<String>();
-    static List<String> Column7 = new ArrayList<String>();
+    List<Card> Column1 = new ArrayList<>(); //row[0]
+    List<Card> Column2 = new ArrayList<>();
+    List<Card> Column3 = new ArrayList<>();
+    List<Card> Column4 = new ArrayList<>();
+    List<Card> Column5 = new ArrayList<>();
+    List<Card> Column6 = new ArrayList<>();
+    List<Card> Column7 = new ArrayList<>();
     
     public Layout(){
         Deck d = new Deck();
 
         for(int i = 0; i < 52; i++){
-            System.out.println(d.c[i].ToString());    
+            System.out.println(d.card[i].ToString());    
             
         }
         int counter = 1;
-        for(int i = 0; i < counter; i++){
-            Column1.add(Deck[i]);
+        for(int j = 0; j < 7; j++){
+            for(int i = 0; i < counter; i++){
+                Column1.add(d.card[i]);
+            }
+            counter++;
         }
-        counter++;
+        //counter++;   
         
     }
     
-    public static void PrintGame(){
+    public void PrintGame(){
         row[0] = Column1.toArray();
         row[1] = Column1.toArray();
         row[2] = Column1.toArray();
