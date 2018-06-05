@@ -13,7 +13,7 @@ import java.util.List;
  * @author michael.pierik700
  */
 public class Layout {
-    static Object row[] = new Object [7];
+    Object row[] = new Object [7];
     List<Card> Column1 = new ArrayList<>(); //row[0]
     List<Card> Column2 = new ArrayList<>();
     List<Card> Column3 = new ArrayList<>();
@@ -32,7 +32,22 @@ public class Layout {
         int counter = 1;
         for(int j = 0; j < 7; j++){
             for(int i = 0; i < counter; i++){
-                Column1.add(d.card[i]);
+                switch (counter) {
+                    case 1: Column1.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 2: Column2.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 3: Column3.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 4: Column4.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 5: Column5.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 6: Column6.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                    case 7: Column7.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                        break;
+                } 
             }
             counter++;
         }
