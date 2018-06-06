@@ -26,32 +26,68 @@ public class Layout {
         Deck d = new Deck();
 
         for(int i = 0; i < 52; i++){
-            System.out.println(d.card[i].ToString());    
+            System.out.println(d.card.get(i).ToString());    
             
         }
-        int counter = 1;
+//        int counter = 1;
+//        for(int j = 0; j < 7; j++){
+//            for(int i = 0; i < counter; i++){
+//                System.out.println("i:"+i);
+//                System.out.println("counter:"+counter);
+//                System.out.println("number:"+(i + ((counter^2)/ 2 - (counter/2))));
+//                
+//                switch (counter) {
+//                    case 1: Column1.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 2: Column2.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 3: Column3.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 4: Column4.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 5: Column5.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 6: Column6.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                    case 7: Column7.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+//                        break;
+//                } 
+//            }
+//            counter++;
+ int counter = 1;
         for(int j = 0; j < 7; j++){
             for(int i = 0; i < counter; i++){
-                switch (counter) {
-                    case 1: Column1.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                switch (j) {
+                    case 0: 
+                        Column1.add(d.card.get(0));
+                    d.card.remove(0);
                         break;
-                    case 2: Column2.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 1: Column2.add(d.card.get(0));
+                            Column2.add(d.card.get(1));
+                    d.card.remove(0);
                         break;
-                    case 3: Column3.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 2: 
                         break;
-                    case 4: Column4.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 3: 
                         break;
-                    case 5: Column5.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 4: 
                         break;
-                    case 6: Column6.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 5: 
                         break;
-                    case 7: Column7.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
+                    case 6: 
                         break;
                 } 
             }
             counter++;
+
+
+
+
+
+
+
         }
-        //counter++;   
+       // counter++;   
         
     }
     
