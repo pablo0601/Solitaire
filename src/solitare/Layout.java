@@ -62,33 +62,45 @@ public class Layout {
                         Column1.add(d.card.get(0));
                     d.card.remove(0);
                         break;
-                    case 1: Column2.add(d.card.get(0));
-                            Column2.add(d.card.get(1));
-                    d.card.remove(0);
+                    case 1: for(int k = 0; k < 2; k++){
+                       Column2.add(d.card.get(k));
+                        d.card.remove(k);
+                    }
                         break;
-                    case 2: 
+                    case 2: for(int k = 0; k < 3; k++){
+                       Column3.add(d.card.get(k));
+                        d.card.remove(k);
+                    }
                         break;
-                    case 3: 
+                    case 3: for(int k = 0; k < 4; k++){
+                       Column4.add(d.card.get(k));
+                        d.card.remove(k);
+                    }
                         break;
-                    case 4: 
+                    case 4: for(int k = 0; k < 5; k++){
+                       Column5.add(d.card.get(k));
+                        d.card.remove(k);
+                    }
                         break;
-                    case 5: 
+                    case 5: //for(int k = 0; k < 6; k++){
+                       //Column6.add(d.card.get(k));
+                        //d.card.remove(k);
+                    //}
                         break;
-                    case 6: 
+                    case 6: //for(int k = 0; k < 7; k++){
+                       //Column7.add(d.card.get(k));
+                        //d.card.remove(k);
+                    //}
                         break;
                 } 
             }
             counter++;
-
-
-
-
-
-
-
         }
        // counter++;   
-        
+       //for(int i = 0; i < 52; i++){
+           // System.out.println(d.card.get(i).ToString());    
+            
+       // } 
     }
     
     public void PrintGame(){
