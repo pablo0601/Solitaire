@@ -18,7 +18,7 @@ public class Solitare {
         
        //Deck d = new Deck();
        Layout l = new Layout();
-       System.out.println(l.Column1);
+       l.PrintGame();
         /*for(int i = 0; i < 52; i++){
             System.out.println(d.c[i].ToString());                  
         }*/ 

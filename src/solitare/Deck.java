@@ -14,13 +14,12 @@ import java.util.Random;
  */
 public class Deck {
     List<Card> card = new ArrayList<>();
-    
+  
     public Deck() {
        // int i = 0;
         for(Card.Suit s: Card.Suit.values()){
             for(Card.Value v: Card.Value.values()){
-                
-                card.add( new Card(s,v)); 
+                               card.add( new Card(s,v)); 
                 //card[i] = new Card(s, v);
                // i++;
             }
@@ -40,8 +39,6 @@ public class Deck {
             //this.card[i] = this.card[j];
             //this.card[j] = memory;
         }
-        
-        
     }
 //    Card AofS = new Card(Card.Suit.Spade, Card.Value.Ace);
 //    Card TwoofS = new Card(Card.Suit.Spade, Card.Value.Two);

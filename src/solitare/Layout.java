@@ -27,91 +27,52 @@ public class Layout {
 
         for(int i = 0; i < 52; i++){
             System.out.println(d.card.get(i).ToString());    
-            
+
         }
-//        int counter = 1;
-//        for(int j = 0; j < 7; j++){
-//            for(int i = 0; i < counter; i++){
-//                System.out.println("i:"+i);
-//                System.out.println("counter:"+counter);
-//                System.out.println("number:"+(i + ((counter^2)/ 2 - (counter/2))));
-//                
-//                switch (counter) {
-//                    case 1: Column1.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 2: Column2.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 3: Column3.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 4: Column4.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 5: Column5.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 6: Column6.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                    case 7: Column7.add(d.card[i + ((counter^2)/ 2 - (counter/2))]);
-//                        break;
-//                } 
-//            }
-//            counter++;
- int counter = 1;
+
+        int counter = 1;
         for(int j = 0; j < 7; j++){
             for(int i = 0; i < counter; i++){
                 switch (j) {
-                    case 0: 
-                        Column1.add(d.card.get(0));
-                    d.card.remove(0);
+                    case 0: Column1.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 1: for(int k = 0; k < 2; k++){
-                       Column2.add(d.card.get(k));
-                        d.card.remove(k);
-                    }
+                    case 1: Column2.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 2: for(int k = 0; k < 3; k++){
-                       Column3.add(d.card.get(k));
-                        d.card.remove(k);
-                    }
+                    case 2: Column3.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 3: for(int k = 0; k < 4; k++){
-                       Column4.add(d.card.get(k));
-                        d.card.remove(k);
-                    }
+                    case 3: Column4.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 4: for(int k = 0; k < 5; k++){
-                       Column5.add(d.card.get(k));
-                        d.card.remove(k);
-                    }
+                    case 4: Column5.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 5: //for(int k = 0; k < 6; k++){
-                       //Column6.add(d.card.get(k));
-                        //d.card.remove(k);
-                    //}
+                    case 5:
+                      Column6.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                    case 6: //for(int k = 0; k < 7; k++){
-                       //Column7.add(d.card.get(k));
-                        //d.card.remove(k);
-                    //}
+                    case 6:
+                       Column7.add(d.card.get(0));
+                        d.card.remove(0);
                         break;
-                } 
+                }
+            System.out.println(d.card.size());
             }
-            counter++;
+        counter++;
         }
-       // counter++;   
-       //for(int i = 0; i < 52; i++){
-           // System.out.println(d.card.get(i).ToString());    
-            
-       // } 
     }
     
     public void PrintGame(){
-        row[0] = Column1.toArray();
-        row[1] = Column1.toArray();
-        row[2] = Column1.toArray();
-        row[3] = Column1.toArray();
-        row[4] = Column1.toArray();
-        row[5] = Column1.toArray();
-        row[6] = Column1.toArray();
-        
+        row[0] = Column1.toString();
+        row[1] = Column1.toString();
+        row[2] = Column1.toString();
+        row[3] = Column1.toString();
+        row[4] = Column1.toString();
+        row[5] = Column1.toString();
+        row[6] = Column1.toString();
+        System.out.println(Column1.toString());
         for(int i = 0; i > 7; i ++){
             System.out.println(row[i]);
         }
