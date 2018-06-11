@@ -13,13 +13,13 @@ import java.util.Random;
  * @author michael.pierik700
  */
 public class Deck {
-    List<Card> card = new ArrayList<>();
+    List<String> card = new ArrayList<>();
   
     public Deck() {
        // int i = 0;
         for(Card.Suit s: Card.Suit.values()){
             for(Card.Value v: Card.Value.values()){
-                               card.add( new Card(s,v)); 
+                               card.add( new Card(s,v).ToString()); 
                 //card[i] = new Card(s, v);
                // i++;
             }
@@ -30,7 +30,7 @@ public class Deck {
     public void Shuffle(){
         Random rand = new Random();
         for(int i = 0; i < 51; i++){
-            Card memory = null;
+            String memory = null;
             int j = rand.nextInt((51 - i) + 1) + i;
             memory = this.card.get(i);
             card.set(i, card.get(j));
