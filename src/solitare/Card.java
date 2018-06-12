@@ -7,6 +7,7 @@ package solitare;
 
 
 public class Card {
+    //Creates Suit Containing all 4 suits
     public enum Suit{
         Spade,
         Club,
@@ -14,6 +15,7 @@ public class Card {
         Diamond
     }
     
+    //Creates Value Containing all values from Ace to King
     public enum Value{
         Ace,
         Two,
@@ -30,14 +32,20 @@ public class Card {
         King
     }
     
+    //make a Suit named suit
     Suit suit;
+    //make value named value
     Value value;
     
+    //creates Card of current Suit and Value
     public Card (Suit s, Value v) {
+        //set current suit to s
         this.suit = s;
+        //set current value to v
         this.value = v;
     }
     
+    //to string function
     public String ToString() {
         String s = this.value + " of " + this.suit;
         return s;

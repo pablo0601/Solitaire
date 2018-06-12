@@ -13,39 +13,43 @@ import java.util.Random;
  * @author michael.pierik700
  */
 public class Deck {
+    //Variable Decleration
     List<String> card = new ArrayList<>();
   
     public Deck() {
-       // int i = 0;
+        //for each suit, for each value
         for(Card.Suit s: Card.Suit.values()){
             for(Card.Value v: Card.Value.values()){
-                               card.add( new Card(s,v).ToString()); 
-                //card[i] = new Card(s, v);
-               // i++;
+                //Create a card in the deck 
+                card.add( new Card(s,v).ToString()); 
             }
         }
+        
+        //gives cards images
+      //setImg();
+        
+        //runs shuffle
         Shuffle();
     }
  
+     public void setImg(){
+         
+     }
+    
     public void Shuffle(){
+        //do 52 times
+        //Random number from 0 to 51 [any card]
         Random rand = new Random();
         for(int i = 0; i < 51; i++){
+            //declare memory
             String memory = null;
+            //get random number
             int j = rand.nextInt((51 - i) + 1) + i;
+            //memory = one card
             memory = this.card.get(i);
+            //swap the 2 cards
             card.set(i, card.get(j));
             card.set(j, memory);
-            
-            //this.card[i] = this.card[j];
-            //this.card[j] = memory;
         }
     }
-//    Card AofS = new Card(Card.Suit.Spade, Card.Value.Ace);
-//    Card TwoofS = new Card(Card.Suit.Spade, Card.Value.Two);
-//    Card ThreeofS = new Card(Card.Suit.Spade, Card.Value.Three);
-//    
-//    public static void Listing(){
-//    
-//        
-//    }
 }

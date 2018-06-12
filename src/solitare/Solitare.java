@@ -15,12 +15,10 @@ public class Solitare {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       //Deck d = new Deck();
+        //New layout
        Layout l = new Layout();
-       l.PrintGame();
-        /*for(int i = 0; i < 52; i++){
-            System.out.println(d.c[i].ToString());                  
-        }*/ 
+       //print game
+       l.FirstTimePrint();
+        
     }   
 }

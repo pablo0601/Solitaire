@@ -8,14 +8,11 @@ package solitare;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author michael.pierik700
- */
 public class Layout {
+    //Variable Decleration
+    //All Cards Layed Out And Visible
     Object row[] = new Object [7];
-    
-    List<String> Column1 = new ArrayList<>(); //row[0]
+    List<String> Column1 = new ArrayList<>();
     List<String> Column2 = new ArrayList<>();
     List<String> Column3 = new ArrayList<>();
     List<String> Column4 = new ArrayList<>();
@@ -23,8 +20,9 @@ public class Layout {
     List<String> Column6 = new ArrayList<>();
     List<String> Column7 = new ArrayList<>();
     
+    //Only Displayes top card of stack
     Object visible[] = new Object[7];
-    List<String> VisColumn1 = new ArrayList<>(); //row[0]
+    List<String> VisColumn1 = new ArrayList<>();
     List<String> VisColumn2 = new ArrayList<>();
     List<String> VisColumn3 = new ArrayList<>();
     List<String> VisColumn4 = new ArrayList<>();
@@ -33,53 +31,69 @@ public class Layout {
     List<String> VisColumn7 = new ArrayList<>();
     
     public Layout(){
+        //creates new deck
         Deck d = new Deck();
-
-//        for(int i = 0; i < 52; i++){
-//            System.out.println(d.card.get(i));    
-//
-//        }
-
+        
+        //declares Counter for number of cards in each stack
         int counter = 1;
         for(int j = 0; j < 7; j++){
             for(int i = 0; i < counter; i++){
+                //switch and case for what column to put the cards in
                 switch (j) {
+                    
+                    //column 1
                     case 0: Column1.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 2
                     case 1: Column2.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 3
                     case 2: Column3.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 4
                     case 3: Column4.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 5
                     case 4: Column5.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 6
                     case 5:
                       Column6.add(d.card.get(0));
                         d.card.remove(0);
                         break;
+                        
+                    //Column 7
                     case 6:
                        Column7.add(d.card.get(0));
                         d.card.remove(0);
                         break;
                 }
-            //System.out.println(d.card.size());
             }
+            //For each time through add 1 to Counter
         counter++;
         }
     }
     
     
     
-    public void PrintGame(){
+    public void FirstTimePrint(){
+//---------------------------------------------------------------------------------------------//
+        //For Each item in Columns, add ? to the visible column of each same number
+        
         Column1.forEach((_item) -> {
             VisColumn1.add("?");   
         });
+        //set Last item in Visible Column to last item in Column
         VisColumn1.set(Column1.size() - 1,Column1.get(Column1.size() - 1));
         
         Column2.forEach((_item) -> {
@@ -111,7 +125,8 @@ public class Layout {
             VisColumn7.add("?");
         });
         VisColumn7.set(Column7.size() - 1,Column7.get(Column7.size() - 1));
-        
+//---------------------------------------------------------------------------------------------//
+        //Putting Columns into row [Creating 2d array?]
         row[0] = Column1;
         row[1] = Column2;
         row[2] = Column3;
@@ -120,6 +135,7 @@ public class Layout {
         row[5] = Column6;
         row[6] = Column7;
         
+        //Putting Visible Columns into visible row [Creating 2d array?]
         visible[0] = VisColumn1;
         visible[1] = VisColumn2;
         visible[2] = VisColumn3;
@@ -128,9 +144,7 @@ public class Layout {
         visible[5] = VisColumn6;
         visible[6] = VisColumn7;
 
-//        for(int i = 0; i < 7; i ++){
-//            System.out.println(row[i]);
-//        }
+        //Prints out emoty line then Layout
         System.out.println();
         for(int i = 0; i < 7; i ++){
             System.out.println(visible[i]);
