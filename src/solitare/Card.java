@@ -5,6 +5,9 @@
  */
 package solitare;
 
+import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
+
 
 public class Card {
     //Creates Suit Containing all 4 suits
@@ -36,13 +39,18 @@ public class Card {
     Suit suit;
     //make value named value
     Value value;
+    //make BufferedImage
+    ImageIcon image;
+    
     
     //creates Card of current Suit and Value
-    public Card (Suit s, Value v) {
+    public Card (Suit s, Value v, String path) {
         //set current suit to s
         this.suit = s;
         //set current value to v
         this.value = v;
+        
+        this.image = new ImageIcon(path);
     }
     
     //to string function

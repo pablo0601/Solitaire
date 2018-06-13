@@ -14,14 +14,74 @@ import java.util.Random;
  */
 public class Deck {
     //Variable Decleration
-    List<String> card = new ArrayList<>();
+    List<Card> card = new ArrayList<>();
+    String cPath;
   
     public Deck() {
         //for each suit, for each value
         for(Card.Suit s: Card.Suit.values()){
             for(Card.Value v: Card.Value.values()){
-                //Create a card in the deck 
-                card.add( new Card(s,v).ToString()); 
+                cPath = "JPEG/";
+                switch (v) {
+                    case Ace:
+                        cPath += "A";
+                        break;
+                    case Two:
+                        cPath += "2";
+                        break;
+                    case Three:
+                        cPath += "3";
+                        break;
+                    case Four:
+                        cPath += "4";
+                        break;
+                    case Five:
+                        cPath += "5";
+                        break;
+                    case Six:
+                        cPath += "6";
+                        break;
+                    case Seven:
+                        cPath += "7";
+                        break;
+                    case Eight:
+                        cPath += "8";
+                        break;
+                    case Nine:
+                        cPath += "9";
+                        break;
+                    case Ten:
+                        cPath += "10";
+                        break;
+                    case Jack:
+                        cPath += "J";
+                        break;
+                    case Queen:
+                        cPath += "Q";
+                        break;
+                    case King:
+                        cPath += "K";
+                        break;
+                }
+                
+                switch (s) {
+                    case Club:
+                        cPath += "C";
+                        break;
+                    case Spade:
+                        cPath += "S";
+                        break;
+                    case Diamond:
+                        cPath += "D";
+                        break;
+                    case Heart:
+                        cPath += "H";
+                        break;
+                }
+                cPath += ".jpg";
+                //Create a card in the deck
+                System.out.println(cPath);
+                card.add(new Card(s,v, cPath)); 
             }
         }
         
@@ -42,7 +102,7 @@ public class Deck {
         Random rand = new Random();
         for(int i = 0; i < 51; i++){
             //declare memory
-            String memory = null;
+            Card memory = null;
             //get random number
             int j = rand.nextInt((51 - i) + 1) + i;
             //memory = one card
