@@ -5,6 +5,8 @@
  */
 package solitare;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author michael.pierik700
@@ -14,6 +16,30 @@ public class PlayGame extends javax.swing.JFrame {
     /**
      * Creates new form PlayGame
      */
+    public PlayGame(Card c) {
+        
+        JLabel jLabel2 = new JLabel(c.image);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/10C.jpg")));
+        //jLabel2.setAlignmentX(TOP_ALIGNMENT);
+        //jLabel2.setAlignmentY(LEFT_ALIGNMENT);
+        jLabel2.setSize(20, 60);
+        jLabel2.setVisible(true);
+        
+        
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)));
+        
+        
+        
+        
+        
+        initComponents();
+    }
+    
     public PlayGame() {
         initComponents();
     }
@@ -33,11 +59,11 @@ public class PlayGame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1567, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
 
         pack();

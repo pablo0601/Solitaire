@@ -90,6 +90,7 @@ public class Deck {
         
         //runs shuffle
         Shuffle();
+        System.out.println(card);
     }
  
      public void setImg(){

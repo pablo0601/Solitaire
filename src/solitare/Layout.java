@@ -10,6 +10,8 @@ import java.util.List;
 
 public class Layout {
     //Variable Decleration
+    public Deck d;
+    
     //All Cards Layed Out And Visible
     Object row[] = new Object [7];
     List<Card> Column1 = new ArrayList<>();
@@ -32,8 +34,10 @@ public class Layout {
     
     public Layout(){
         //creates new deck
-        Deck d = new Deck();
-        
+        d = new Deck();
+        PlayGame p;
+        p = new PlayGame(d.card.get(0));
+        p.setVisible(true);
         //declares Counter for number of cards in each stack
         int counter = 1;
         for(int j = 0; j < 7; j++){
@@ -82,47 +86,48 @@ public class Layout {
             //For each time through add 1 to Counter
         counter++;
         }
+        
     }
     
     
     
     public void FirstTimePrint(){
 //---------------------------------------------------------------------------------------------//
-        //For Each item in Columns, add ? to the visible column of each same number
+//        //For Each item in Columns, add ? to the visible column of each same number
 //        
 //        Column1.forEach((_item) -> {
-//            VisColumn1.add("?");   
+//      //      VisColumn1.add("?");   
 //        });
 //        //set Last item in Visible Column to last item in Column
 //        VisColumn1.set(Column1.size() - 1,Column1.get(Column1.size() - 1));
 //        
 //        Column2.forEach((_item) -> {
-//            VisColumn2.add("?");
+//     //       VisColumn2.add("?");
 //        });
 //        VisColumn2.set(Column2.size() - 1,Column2.get(Column2.size() - 1));
 //        
 //        Column3.forEach((_item) -> {
-//            VisColumn3.add("?");
+//    //        VisColumn3.add("?");
 //        });
 //        VisColumn3.set(Column3.size() - 1,Column3.get(Column3.size() - 1));
 //        
 //        Column4.forEach((_item) -> {
-//            VisColumn4.add("?");
+//      //      VisColumn4.add("?");
 //        });
 //        VisColumn4.set(Column4.size() - 1,Column4.get(Column4.size() - 1));
 //        
 //        Column5.forEach((_item) -> {
-//            VisColumn5.add("?");
+//       //     VisColumn5.add("?");
 //        });
 //        VisColumn5.set(Column5.size() - 1,Column5.get(Column5.size() - 1));
 //        
 //        Column6.forEach((_item) -> {
-//            VisColumn6.add("?");
+//         //   VisColumn6.add("?");
 //        });
 //        VisColumn6.set(Column6.size() - 1,Column6.get(Column6.size() - 1));
 //        
 //        Column7.forEach((_item) -> {
-//            VisColumn7.add("?");
+//            //VisColumn7.add("?");
 //        });
 //        VisColumn7.set(Column7.size() - 1,Column7.get(Column7.size() - 1));
 //---------------------------------------------------------------------------------------------//
@@ -144,11 +149,12 @@ public class Layout {
 //        visible[5] = VisColumn6;
 //        visible[6] = VisColumn7;
 //
-//        //Prints out emoty line then Layout
-//        System.out.println();
-//        for(int i = 0; i < 7; i ++){
-//            System.out.println(visible[i]);
-//        }
+        //Prints out emoty line then Layout
+        System.out.println();
+        for(int i = 0; i < 7; i ++){
+            System.out.println(row[i]);
+        }
+        
     }
     
 
