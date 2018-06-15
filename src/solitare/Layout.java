@@ -149,11 +149,6 @@ public class Layout {
 //        visible[5] = VisColumn6;
 //        visible[6] = VisColumn7;
 //
-        //Prints out emoty line then Layout
-        System.out.println();
-        for(int i = 0; i < 7; i ++){
-            System.out.println(row[i]);
-        }
         
     }
     

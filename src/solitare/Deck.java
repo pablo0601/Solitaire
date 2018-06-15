@@ -80,11 +80,11 @@ public class Deck {
                 }
                 cPath += ".jpg";
                 //Create a card in the deck
-                System.out.println(cPath);
+                //System.out.println(cPath);
                 card.add(new Card(s,v, cPath)); 
             }
         }
-        
+        System.out.println("Deck Made");
         //gives cards images
       //setImg();
         
@@ -112,5 +112,6 @@ public class Deck {
             card.set(i, card.get(j));
             card.set(j, memory);
         }
+        System.out.println("Shuffled");
     }
 }

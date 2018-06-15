@@ -10,6 +10,8 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import javax.swing.JLabel;
+import javax.imageio.ImageIO;
+import static javax.imageio.ImageIO.getImageWritersByMIMEType;
 
 /**
  *
@@ -21,12 +23,23 @@ public class PlayGame extends javax.swing.JFrame {
      * Creates new form PlayGame
      */
     public PlayGame(Card c) {
+        getScaledImage(c.image.getImage(), 69, 108);
+        
+        
+        
+        ImageIcon imageIcon = new ImageIcon("./img/imageName.png");
+        Image image = imageIcon.getImage(); // transform it 
+        Image newimg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+        imageIcon = new ImageIcon(newimg);  // transform it back
+        
+        
         
         JLabel jLabel2 = new JLabel(c.image);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/10C.jpg")));
+        
         //jLabel2.setAlignmentX(TOP_ALIGNMENT);
         //jLabel2.setAlignmentY(LEFT_ALIGNMENT);
-        jLabel2.setSize(20, 60);
+        jLabel2.setSize(69, 108);
         jLabel2.setVisible(true);
         
         
