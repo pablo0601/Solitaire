@@ -93,43 +93,43 @@ public class Layout {
     
     public void FirstTimePrint(){
 //---------------------------------------------------------------------------------------------//
-//        //For Each item in Columns, add ? to the visible column of each same number
-//        
-//        Column1.forEach((_item) -> {
-//      //      VisColumn1.add("?");   
-//        });
-//        //set Last item in Visible Column to last item in Column
-//        VisColumn1.set(Column1.size() - 1,Column1.get(Column1.size() - 1));
-//        
-//        Column2.forEach((_item) -> {
-//     //       VisColumn2.add("?");
-//        });
-//        VisColumn2.set(Column2.size() - 1,Column2.get(Column2.size() - 1));
-//        
-//        Column3.forEach((_item) -> {
-//    //        VisColumn3.add("?");
-//        });
-//        VisColumn3.set(Column3.size() - 1,Column3.get(Column3.size() - 1));
-//        
-//        Column4.forEach((_item) -> {
-//      //      VisColumn4.add("?");
-//        });
-//        VisColumn4.set(Column4.size() - 1,Column4.get(Column4.size() - 1));
-//        
-//        Column5.forEach((_item) -> {
-//       //     VisColumn5.add("?");
-//        });
-//        VisColumn5.set(Column5.size() - 1,Column5.get(Column5.size() - 1));
-//        
-//        Column6.forEach((_item) -> {
-//         //   VisColumn6.add("?");
-//        });
-//        VisColumn6.set(Column6.size() - 1,Column6.get(Column6.size() - 1));
-//        
-//        Column7.forEach((_item) -> {
-//            //VisColumn7.add("?");
-//        });
-//        VisColumn7.set(Column7.size() - 1,Column7.get(Column7.size() - 1));
+        //For Each item in Columns, add ? to the visible column of each same number
+        
+        Column1.forEach((_item) -> {
+      //      VisColumn1.add("?");   
+        });
+        //set Last item in Visible Column to last item in Column
+        VisColumn1.set(Column1.size() - 1,Column1.get(Column1.size() - 1));
+        
+        Column2.forEach((_item) -> {
+     //       VisColumn2.add("?");
+        });
+        VisColumn2.set(Column2.size() - 1,Column2.get(Column2.size() - 1));
+        
+        Column3.forEach((_item) -> {
+    //        VisColumn3.add("?");
+        });
+        VisColumn3.set(Column3.size() - 1,Column3.get(Column3.size() - 1));
+        
+        Column4.forEach((_item) -> {
+      //      VisColumn4.add("?");
+        });
+        VisColumn4.set(Column4.size() - 1,Column4.get(Column4.size() - 1));
+        
+        Column5.forEach((_item) -> {
+       //     VisColumn5.add("?");
+        });
+        VisColumn5.set(Column5.size() - 1,Column5.get(Column5.size() - 1));
+        
+        Column6.forEach((_item) -> {
+         //   VisColumn6.add("?");
+        });
+        VisColumn6.set(Column6.size() - 1,Column6.get(Column6.size() - 1));
+        
+        Column7.forEach((_item) -> {
+            //VisColumn7.add("?");
+        });
+        VisColumn7.set(Column7.size() - 1,Column7.get(Column7.size() - 1));
 //---------------------------------------------------------------------------------------------//
         //Putting Columns into row [Creating 2d array?]
         row[0] = Column1;
@@ -141,14 +141,14 @@ public class Layout {
         row[6] = Column7;
         
         //Putting Visible Columns into visible row [Creating 2d array?]
-//        visible[0] = VisColumn1;
-//        visible[1] = VisColumn2;
-//        visible[2] = VisColumn3;
-//        visible[3] = VisColumn4;
-//        visible[4] = VisColumn5;
-//        visible[5] = VisColumn6;
-//        visible[6] = VisColumn7;
-//
+        visible[0] = VisColumn1;
+        visible[1] = VisColumn2;
+        visible[2] = VisColumn3;
+        visible[3] = VisColumn4;
+        visible[4] = VisColumn5;
+        visible[5] = VisColumn6;
+        visible[6] = VisColumn7;
+
         
     }
     
