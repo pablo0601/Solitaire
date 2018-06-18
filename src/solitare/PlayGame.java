@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JLabel;
 import javax.imageio.ImageIO;
 import static javax.imageio.ImageIO.getImageWritersByMIMEType;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -23,25 +24,25 @@ public class PlayGame extends javax.swing.JFrame {
      * Creates new form PlayGame
      */
     public PlayGame(Card c) {
-        getScaledImage(c.image.getImage(), 69, 108);
+        getScaledImage(c.image.getImage(), 138, 216);
         
         
         
-        ImageIcon imageIcon = new ImageIcon("./img/imageName.png");
-        Image image = imageIcon.getImage(); // transform it 
-        Image newimg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
-        imageIcon = new ImageIcon(newimg);  // transform it back
-        
-        
-        
+//        ImageIcon imageIcon = new ImageIcon("./img/imageName.png");
+//        Image image = imageIcon.getImage(); // transform it 
+//        Image newimg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+//        imageIcon = new ImageIcon(newimg);  // transform it back
+//        
+//        
+        JLabel labelArray[] = new JLabel[7];
         JLabel jLabel2 = new JLabel(c.image);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/10C.jpg")));
         
         //jLabel2.setAlignmentX(TOP_ALIGNMENT);
         //jLabel2.setAlignmentY(LEFT_ALIGNMENT);
-        jLabel2.setSize(69, 108);
+        jLabel2.setSize(138, 216);
         jLabel2.setVisible(true);
-        
+        jLabel2.setIcon(new ImageIcon(getScaledImage(c.image.getImage(), 138, 216)));
         
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,6 +51,10 @@ public class PlayGame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel2)));
         
+        
+       // for(int i = 0; i < 7; i++){
+        //    labelArray[i].setIcon(new ImageIcon(getScaledImage(c.image.getImage(), 138, 216)));
+       // }
         
         
         
@@ -97,9 +102,6 @@ public class PlayGame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
